@@ -149,14 +149,6 @@ head(data)</code></pre>
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
 <h2>What is mean total number of steps taken per day?</h2>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
 <p>The average total number of steps taken per day excluding all NA values is calculated as below:</p>
 <pre class="r"><code>dataNoMissingValues &lt;- filter(data,steps != &quot;NA&quot;)
 totalSteps &lt;- dataNoMissingValues %&gt;% group_by(date) %&gt;%

@@ -1,11 +1,6 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-author: "[Shazrul Zulkifli](https://github.com/shazrul205)"
-date: "9 Sep 2016"
-output: 
-  html_document: 
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
+[Shazrul Zulkifli](https://github.com/shazrul205)  
+9 Sep 2016  
 
 ##Introduction
 This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
@@ -64,7 +59,7 @@ hist(totalSteps$total, col = "red", main = "Total Steps per Day",
      xlab = "Total Steps", ylab = "Frequency")
 ```
 
-![plot of chunk histSteps](figure/histSteps-1.png)
+![](PA1_template_files/figure-html/histSteps-1.png)<!-- -->
 
 The computed median is as below:
 
@@ -92,7 +87,7 @@ aveStepsInterval <- dataNoMissingValues %>%
 with(aveStepsInterval, plot(interval, mean, type = "l", xlab = "Interval Identifier", ylab = "Number of Steps", main = "Average Daily Steps"))
 ```
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 As can be seen in the above figure, the maximum number of steps occur in the 5-minute interval which correspond to the 835 identifier.
 
@@ -163,7 +158,7 @@ hist(totalStepsDataImputed$total, col = "blue", main = "Total Steps per Day",
      xlab = "Total Steps", ylab = "Frequency")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 The median and mean are computed as below:
 
@@ -226,6 +221,6 @@ ggplot(dataForPanelPlot,aes(x=interval,y = mean))+
   labs(x="Interval Identifier", y="Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 It can be clearly seen that there is a higher spike in number of stpes during he weekdays compared to the weekends. However, the steps are taken more in the weekends
